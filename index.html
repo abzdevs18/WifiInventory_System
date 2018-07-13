@@ -1,0 +1,140 @@
+<?php
+session_start();
+include 'include/db.php';
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wifi_Inventory</title>
+	<link rel="stylesheet" type="text/css" href="style/search.css">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/modal.css">
+	<script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(e){
+			$('#search').keyup(function(){
+				$("#back_result").show();
+				var x = $(this).val();
+				$.ajax({
+					type:'GET',
+					url:'get_users.php',
+					data:'search='+x,
+					success:function(data){
+						$("#back_result").html(data);
+					}
+					,
+				});
+
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="main">
+		<nav>
+			<div id="wrap">
+				<div id="logo">
+					<img src="img/logo.png">
+				</div>	
+				<div id="wrapSearch">
+					<div id="searchInput">
+						<form method="GET" action="get_users.php">
+								<input id="search" type="text" name="search" placeholder="Search your name...">
+							<div id="searchIcon">
+								<img src="img/search.png">
+							</div>
+						</form>
+						<div id="back_result"></div>						
+					</div>
+					<div id="signIn">
+						<button id="pop">SIGN IN</button>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div id="content">
+			<div id="form">
+				<div id="formContent">
+					<form method="POST" action="include/add.php">
+						<span>REGISTER</span><hr style="margin-top: 5px;border:2px solid gray;border-radius: 3px;">
+						<input type="text" name="username" placeholder="Username" style="margin-top: 33px;"><br>
+						<input type="text" name="firstname" placeholder="Firstname"><br>
+						<input type="password" name="password" placeholder="Password"><br>
+						<input type="password" name="conPass" placeholder="Confirm Password"><br>
+						<button type="submit" name="submit">PROCEED</button>
+					</form>
+				</div>
+			</div>
+			<div id="welcome">
+				<div id="welNote">
+					<p style="margin-top: 10px;">Welcome to <strong>WIFI USER INVENTORY SYSTEM</strong></p>
+					<p>Record the device Connected to your <strong>Wi-Fi Network</strong></p>
+				</div>
+				<div id="wrapvideo">
+					<div id="video">
+						<video width="677" autoplay muted loop>
+							<source src="video/video.mp4" type="video/mp4">
+							Browser not supported
+						</video>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="popUp">
+		<div id="modalContent">
+			<div id="loginInfo">
+				<strong>Sign In</strong><br>
+				<input type="text" name="Username" placeholder="Username"><br>
+				<input type="password" name="password" placeholder="Password"><br>
+				<button>SIGN IN</button>
+			</div>
+			<div class="close">
+				<strong>CLOSE</strong>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" id="popUp">
+		<div id="modalContent">
+			<div id="profInfo">
+			</div>
+			<div class="close">
+				<strong>CLOSE</strong>
+			</div>
+		</div>
+	</div>
+<script>
+	var modal=document.getElementById("popUp");
+	var btn=document.getElementById("pop");
+	var close=document.getElementsByClassName("close")[0];
+	btn.onclick=function(){
+		modal.style.display="block";
+	}
+	close.onclick=function(){
+		modal.style.display="none";
+	}
+	window.onclick=function(event){
+		if (event.target==modal){
+			modal.style.display="none";
+		}
+	}
+</script>
+<script>
+	var modal=document.getElementById("popUp");
+	var btn=document.getElementById("user");
+	var close=document.getElementsByClassName("close")[0];
+	btn.onclick=function(){
+		modal.style.display="block";
+	}
+	close.onclick=function(){
+		modal.style.display="none";
+	}
+	window.onclick=function(event){
+		if (event.target==modal){
+			modal.style.display="none";
+		}
+	}
+</script>
+</body>
+</html>
