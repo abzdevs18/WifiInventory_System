@@ -1,0 +1,86 @@
+.adminProfile {
+width: 890px;
+height: 630px;
+margin: 5px;
+border-radius: 5px;
+display: flex;
+flex-direction: row;
+}
+.adminProfileHead{
+	width: 300px;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+}
+.adminProfileDetails {
+	width: calc(100% - 300px);
+	min-height: 100%;
+	right: 0;
+	margin-top: 40px;
+
+}
+.cen {
+	text-align: left;
+}
+.profileInputDetails {
+	display: flex;
+	flex-direction: row;
+	text-align: left;
+}
+.profileImageWrapper {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	margin: 15px;
+}
+.profileImageWrapper img{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border: 2px solid #555;
+}
+.profileInputDetails {
+	min-width: 100%;
+	min-height: 100%;
+
+}
+.profileInputDetails span {
+	color: #868686;
+} 
+.profileInputDetails input {
+	width: 270px;
+	height: 25px;
+	margin-right: 20px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	background-color: transparent;
+	border: 2px solid #888;
+	border-radius: 4px;
+	padding-left: 10px;
+	font-weight: bold;
+	color: #f3f3f3;
+}
+.adminProfileDetails span {
+	color: #868686;
+}
+.adminProfileDetails textarea {
+	resize: none;
+	color: #555;
+	font-weight: bold;
+}
+.adminProfileDetails button {
+	width: 200px;
+	height: 30px;
+	border-radius: 10px;
+	border: 2px solid #555;
+	font-weight: bold;
+	margin-top: 20px;
+
+}
+.selectPhoto {
+	z-index: 134;
+position: absolute;
+margin-left: 40px;
+margin-top: -25px;
+}

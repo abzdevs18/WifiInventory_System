@@ -1,0 +1,95 @@
+.modal {
+	display: none;
+	width: 100%;
+	min-height: 100%;
+	background-color: rgba(34,34,34,0.7);
+	position: fixed;
+	z-index: 2500;
+}
+#modalContent {
+	position: relative;
+	width: 600px;
+	height: 333px;
+	background-color: #232323;
+	margin: 125px auto;
+	border: 2px solid #f98315;
+	border-radius: 4px;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+@-webkit-keyframes animatetop {
+    from {top:-600px; opacity:0} 
+    to {top:0; opacity:1}
+}
+@keyframes animatetop {
+    from {top:-600px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+#loginInfo {
+	width: 470px;
+	height: 230px;
+	margin: 50px auto 0;
+}
+#loginInfo > strong {
+	color: white;
+	font-size: 23px;
+}
+#loginInfo > input {
+	outline: none;
+	width: 472px;
+	height: 40px;
+	border: none;
+	margin-top: 20px;
+	background-color: transparent;
+	font-size: 20px;
+	color: #f98315;
+	padding-left: 10px;
+	border: 2px solid #f98315;
+}
+#loginInfo > button {
+	border: 3px solid #f98315;
+	width: 474px;
+	height: 40px;
+	background-color: transparent;
+	color: #f98315;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	margin-top: 20px;
+	transition: all .5s ease-in;
+}
+#loginInfo > button:hover {
+	background-color: #f98315;
+	color: white;
+}
+#profInfo {
+	width: 615px;
+	height: 330px;
+	background-color: #636363;
+	border: 2px solid orange;
+}
+
+.close {
+	width: 78px;
+	height: 38px;
+	border: 3px solid #f98315;
+	text-align: center;
+	cursor: pointer;
+	margin-left: 512px;
+	margin-top: 4px;
+	border-radius: 3px;
+	transition: all .5s ease;
+	color: #f98315;
+}
+.close > strong {
+	position: absolute;	
+	margin-top: 10px;
+	margin-left: -30px;
+}
+.close:hover {
+	background-color: #f98315;
+	color: white;
+}

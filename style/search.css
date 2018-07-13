@@ -1,0 +1,75 @@
+#searchInput {
+	width: 335px;
+	height: 40px;
+	border: 2px solid #f98315;
+	border-radius: 4px;
+	float: left;
+}
+#searchInput > form {
+	height: 40px;
+}
+#searchInput input {
+	outline: none;
+	width: 275px;
+	border: none;
+	background-color: transparent;
+	font-size: 20px;
+	padding-top: 6px;
+	padding-left: 10px;
+	color: #f98315;
+	margin: 0px 0;
+
+}
+#searchInput form > #searchIcon {
+	float: right;
+	border-left: 2px solid #f98315;
+	height: 100%;
+	cursor: pointer;
+
+}
+#searchIcon > img {
+	width: 32px;
+	margin: 5px;
+	padding-left: 5px;
+}
+#searchInput form > input::placeholder {
+	color: #f98315;
+}
+#back_result {
+	margin-top: 2px;
+}
+#user {
+	width:283px;
+	height: 48px;
+	background-color: #3a0a0a;
+	border-left: 2px solid #f98315;
+	border-right: 2px solid #f98315;
+	transition: all .3s ease-in;
+}
+#user:hover {
+	background-color: #f98315;
+}
+#user span {
+	float: right;
+	width: 240px;
+	height: 50px;
+}
+#user span a{
+	text-decoration: none;
+	color: #f98315;
+	padding: 13px 8px;
+	display: block;
+	transition: all .3s ease-in;
+}
+#user span a:hover {
+	color: white;
+}
+#profCol {
+	background-color: orange;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin: 4px;
+	position: absolute;
+}

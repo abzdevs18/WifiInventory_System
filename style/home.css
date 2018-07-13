@@ -1,0 +1,71 @@
+body {
+	background-color: #610808;
+	margin: 0;
+	font-family: arial;
+
+}
+#sideMenu {
+	width: 50px;
+	min-height: 100%;
+	background-color: #941212;
+	position: absolute;
+	transition: all .3s ease-in;
+}
+#sideMenu:hover {
+	width: 250px;
+	display: block;
+}
+#menuHead {
+	width: 100%;
+	height: 50px;
+	background-color: #7c0a0a;
+}
+#menuHead > p {
+	font-size: 20px;
+	color: #f98315;
+	font-weight: bold;
+	margin: 13px 40px;
+	position: absolute;
+	display: none;
+}
+#menuHead:hover {
+	display: block;
+}
+#sideMenu > img {
+	width: 40px;
+	float: right;
+	font-weight: bold;
+	margin: 5px 7px;
+	color: #f98315;
+	position: fixed;
+}
+#menu {
+	width: 100%;
+	height: 50px;
+	color: #c2c2c2;
+	margin:auto;
+}
+#menu > p {
+	font-size: 20px;
+	margin: 13px 15px;
+	position: absolute;
+}
+#link {
+	width: 100%;
+	height: 50px;
+	margin: 50px;
+	position: absolute;
+}
+
+nav {
+	width: 100%;
+	height: 50px;
+	background-color: #222;
+}
+
+/*subs in amdin design */
+.dashboard {
+	width: 1300px;
+	height: 100vh;
+	background-color: gray;
+}

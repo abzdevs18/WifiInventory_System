@@ -1,0 +1,8 @@
+$userImage = 'img/upload/groot/' . $user_id . '.jpg';
+$defaultImage = 'path/to/default/img';
+
+$image = (file_exists($userImage)) ? $userImage : $defaultImage;
+
+Then use $image as your image src:
+
+<img src="<?php echo $image; ?>" />				
